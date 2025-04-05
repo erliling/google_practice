@@ -42,10 +42,6 @@
     padding-left: 0px;
 }
 
-.nav .content .navright ul li .svg {
-
-}
-
 img {
     width: 32px;
     height: 32px;
@@ -54,10 +50,8 @@ img {
     
 }
 .svg1 {
-    /* padding-top: -12px; */
     width: 24px;
     height: 24px;
-    /* margin: auto 0; */
     margin-top: 12px;
 }
 
@@ -65,16 +59,10 @@ img {
     width: 24px;
     height: 24px;
     margin-top: 7px;
-    /* margin-left: 24px; */
 }
 svg:hover {
     fill: #1967d2;
 }
-
-.nav .content .navright .svg:first-child {
-    /* margin-left: 0; */
-}
-
 
 .svg2 {
     width: 24px;
