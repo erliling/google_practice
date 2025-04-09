@@ -260,14 +260,74 @@ svg:hover {
     left: 20px;
     top: 100px;
 }
-.inline-container {
-    /* overflow-x: scroll; */
-    vertical-align: middle;
+
+.seperator3 {
+    height: 24px;
 }
-.inline-item {
-    display: inline-block;
-    vertical-align: middle;
-    height: 96px;
-    margin-right: -4px;
+.grid {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto 58px;
+    padding: 0 24px;
+}
+.grid .tile1 {
+    height: 802px;
+    background-color: #F5F3EF;
+    grid-column-end: span 6;
+    border-radius: 28px;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+
 }
 
+.grid .tile2 {
+    height: 683px;
+    background-color: #F5F3EF;
+    grid-column-end: span 12;
+    border-radius: 28px;
+}
+.grid .tile3 {
+    height: 802px;
+    background-color: #F5F3EF;
+    grid-column-end: span 4;
+    border-radius: 28px;
+}
+
+.grid .tile1 .titlesec {
+    width: 448px;
+    height: 280px;
+    margin: 0 118px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid .tile1 .titlesec h3 {
+    /* display: block; */
+    font-size: 16px;
+}
+
+.grid .tile1 .titlesec h1 {
+    max-width: 220px;
+
+    /* display: block; */
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grid .tile1 .titlesec a {
+    /* display: block; */
+    font-size: 16px;
+}
+.grid .tile1  img {
+    width: 100%;
+    height: auto;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+}
