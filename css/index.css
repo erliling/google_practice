@@ -281,20 +281,7 @@ svg:hover {
 
 }
 
-.grid .tile2 {
-    height: 683px;
-    background-color: #F5F3EF;
-    grid-column-end: span 12;
-    border-radius: 28px;
-}
-.grid .tile3 {
-    height: 802px;
-    background-color: #F5F3EF;
-    grid-column-end: span 4;
-    border-radius: 28px;
-}
-
-.grid .tile1 .titlesec {
+.grid  .titlesec {
     width: 448px;
     height: 280px;
     margin: 0 118px;
@@ -307,12 +294,12 @@ svg:hover {
     align-items: center;
 }
 
-.grid .tile1 .titlesec h3 {
+.grid   h3 {
     /* display: block; */
     font-size: 16px;
 }
 
-.grid .tile1 .titlesec h1 {
+.grid   h1 {
     max-width: 220px;
 
     /* display: block; */
@@ -321,13 +308,75 @@ svg:hover {
     text-align: center;
 }
 
-.grid .tile1 .titlesec a {
+.grid   a {
     /* display: block; */
     font-size: 16px;
+    border: 2px solid #3c4043;
+    padding: 10px 20px;
+    border-radius: 4px;
 }
-.grid .tile1  img {
+.grid   img {
     width: 100%;
+    /* width: 400px; */
     height: auto;
     /* overflow-clip-margin: content-box;
     overflow: clip; */
+}
+
+.grid .tile2 {
+    height: 683px;
+    max-height: 683px;
+    background-color: #F5F3EF;
+    grid-column-end: span 12;
+    row-gap: 0px;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+}
+.grid  .titlesec2 {
+    width: 600px;
+    height: 148px;
+    margin: 0 auto;
+    padding: 40px;
+    /* box-sizing: border-box; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* margin-left: -350px */
+    transform: translate(-50%, -0%);
+}
+/* .grid .wrapper {
+    width: 1392px;
+    height: 683px;
+    padding: 40px 80px;
+} */
+.grid .titlesec2  h1 {
+    max-width: 600px;
+
+    /* display: block; */
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.grid  img {
+    width: 100%;
+    /* width: 400px; */
+    height: auto;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+    /* position: absolute;
+    bottom: 0; */
+}
+
+.grid .tile3 {
+    height: 802px;
+    background-color: #F5F3EF;
+    grid-column-end: span 4;
+    border-radius: 28px;
 }
