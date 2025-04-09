@@ -153,12 +153,23 @@ svg:hover {
     display: flex;
     justify-content: space-between;
 }
+
+::-webkit-scrollbar{
+    height: 2px;
+    width: 4px;
+    background: rgb(195, 195, 195);
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #000;
+    border-radius: 10px;
+}
+
 .carousel .item {
     width: 212px;
     height: 418px;
     /* background-color: orange; */
     position: relative;
-    margin: auto 15px;
+    margin: auto 15px 40px;
 }
 .carousel .item .pic {
     width: 212px;
@@ -250,7 +261,7 @@ svg:hover {
     top: 100px;
 }
 .inline-container {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     vertical-align: middle;
 }
 .inline-item {
@@ -259,3 +270,4 @@ svg:hover {
     height: 96px;
     margin-right: -4px;
 }
+
