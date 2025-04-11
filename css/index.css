@@ -628,6 +628,44 @@ svg:hover {
 }
 /* #endregion grid2*/
 
+/* #region littlegrid*/
+.littlegrid {
+    display: flex;
+    justify-content: center;
+}
+.littlegrid .content{
+    width: 1156px;
+    height: 194px;
+    display: flex;
+    column-gap: 24px;
+    
+}
+.littlegrid .content .tile {
+    width: 272px;
+    height: 194px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.littlegrid .content .tile img {
+    width: 270px;
+    height: 156px;
+    padding: 32px 53px;
+    box-sizing: border-box;
+    border: 1px solid #d9dadb;
+    border-radius: 20px;
+}
+.littlegrid .content .tile span {
+    color: #1967d2;
+
+}
+/* #endregion littlegrid*/
+
+/* #region grid3*/
+
+/* #endregion grid3*/
+
 /* #region common*/
 .seperator0 {
     height: 120px;
