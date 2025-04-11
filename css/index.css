@@ -663,8 +663,238 @@ svg:hover {
 /* #endregion littlegrid*/
 
 /* #region grid3*/
+.grid3 {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto 58px;
+    padding: 0 24px;
+}
+.grid3 .tile1 {
+    height: 898px;
+    background-color: #F5F3EF;
+    grid-column-end: span 6;
+    border-radius: 28px;
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    /* position: relative; */
+}
 
+.grid3  .titlesec {
+    width: 448px;
+    height: 280px;
+    margin: 0 118px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid3  .titlesec2 {
+    width: 448px;
+    height: 400px;
+    margin: 0 118px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid3   h3 {
+    /* display: block; */
+    font-size: 16px;
+}
+
+.grid3   h1 {
+    max-width: 400px;
+
+    /* display: block; */
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grid3   a {
+    /* display: block; */
+    font-size: 16px;
+    border: 2px solid #3c4043;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.grid3   img {
+    width: 100%;
+    /* width: 400px; */
+    height: auto;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+    /* position: absolute;
+    bottom: 0px; */
+}
 /* #endregion grid3*/
+
+/* #region grid4*/
+.grid2 .tile3 {
+    width: 696px;
+    height: 696px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid2  .titlesec {
+    width: 696px;
+    height: 340px;
+    /* margin: 0 118px; */
+    padding: 40px 80px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid2   h3 {
+    /* display: block; */
+    font-size: 16px;
+}
+
+.grid2   h1 {
+    max-width: 500px;
+
+    /* display: block; */
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grid2 a {
+    /* display: block; */
+    font-size: 16px;
+    border: 2px solid #3c4043;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.grid2 span {
+    text-align: center;
+}
+.grid2 .tile3 img {
+    width: 696px;
+    height: 696px;
+    border-radius: 28px;
+}
+.grid2 .tile3 .titlesec img {
+    width: auto;
+    height: 32px;
+}
+
+.grid2  .titlesec3 {
+    width: 696px;
+    height: 240px;
+    /* margin: 0 118px; */
+    padding: 40px 80px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.grid2 .tile3 .titlesec3 img {
+    width: auto;
+    height: 32px;
+}
+
+
+.grid .tile4 {
+    height: 416px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    grid-column-end: span 12;
+    row-gap: 0px;
+    border-radius: 28px;
+    /* overflow: hidden; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid .tile4 .smallicon {
+    width: 48px;
+    height: 48px;
+}
+
+.grid .tile4 .titlesec3 {
+    width: 800px;
+    height: 416px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+.grid .tile4 .longtext {
+    max-width: 684px;
+}
+/* #endregion grid4*/
+
+/* #region littlegrid2*/
+.littlegrid2 {
+    display: flex;
+    justify-content: center;
+}
+.littlegrid2 .content{
+    width: 1156px;
+    height: 258px;
+    display: flex;
+    column-gap: 24px;
+    
+}
+.littlegrid2 .content .tile {
+    width: 370px;
+    height: 258px;
+    background-color: #f8f9fa;
+    border-radius: 28px;
+    padding: 60px 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.littlegrid2 .content .tile img {
+    width: 32px;
+    height: 32px;
+}
+
+.littlegrid2   h1 {
+    max-width: 500px;
+
+    /* display: block; */
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.littlegrid2 a {
+    /* display: block; */
+    font-size: 16px;
+    border: 2px solid #3c4043;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+/* #endregion littlegrid2*/
+
+/* #region annotation*/
+
+/* #endregion annotation*/
 
 /* #region common*/
 .seperator0 {
@@ -673,6 +903,10 @@ svg:hover {
 
 .seperator {
     height: 104px;
+}
+
+.seperator1 {
+    height: 80px;
 }
 
 .seperator2 {
