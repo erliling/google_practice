@@ -433,22 +433,30 @@ svg:hover {
 
 /* #region carousel*/
 
-.carousel {
+.carousel2 {
     width: 100%;
-    height: 482px;
+    height: 518px;
     display: flex;
     /* justify-content: space-between; */
     align-items:center;
 }
-.carousel .hlist {
+.carousel2 .content {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+.carousel2 .hlist {
     width: 1156px;
     overflow: hidden;
     overflow-x: scroll;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    column-gap: 24px;
+
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     height: 2px;
     width: 4px;
     background: rgb(195, 195, 195);
@@ -456,27 +464,33 @@ svg:hover {
 ::-webkit-scrollbar-thumb:horizontal{
     background: #000;
     border-radius: 10px;
-}
-
-.carousel .item {
-    width: 212px;
-    height: 418px;
+} */
+.carousel2 .item2 {
+    width: 118px;
+    height: 492px;
     /* background-color: orange; */
     position: relative;
-    margin: auto 15px 40px;
+    /* margin: auto 15px 40px; */
 }
-.carousel .item .pic {
-    width: 212px;
-    height: 252px;
+.carousel2 .item {
+    width: 370px;
+    height: 492px;
+    /* background-color: orange; */
+    position: relative;
+    /* margin: auto 15px 40px; */
+}
+.carousel2 .item .pic {
+    width: 370px;
+    height: 370px;
     background-color: #eff0f1;
-    border-radius: 6px;
+    border-radius: 28px;
     margin-bottom: 20px;
 }
-.carousel .item img {
+.carousel2 .item img {
     width: 212px;
     /* height: 252px; */
 }
-.carousel .item .pic .newtag {
+.carousel2 .item .pic .newtag {
     width: 40px;
     height: 20px;
     background-color: rgb(222, 225, 240);
@@ -489,20 +503,20 @@ svg:hover {
     left: 20px;;
 }
 
-.carousel .item h3 {
+.carousel2 .item h3 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.carousel .item .crossline {
+.carousel2 .item .crossline {
     text-decoration: line-through;
     color: #676d72;
     margin-left: 5px;
     font-size: 14px;
 }
 
-.carousel .item .tag {
+.carousel2 .item .tag {
     width: 100px;
     height: 20px;
     background-color: rgb(208, 234, 222);
@@ -512,20 +526,20 @@ svg:hover {
     line-height: 20px;
     margin-top: 10px;
 }
-.carousel .item .tag svg {
+.carousel2 .item .tag svg {
     width: 14px;
     height: 14px;
     vertical-align: middle;
 }
 
-.carousel .item a {
+.carousel2 .item a {
     display: block;
     font-size: 16px;
     color: #1967d2;
     position: absolute;
     bottom: 15px;
 }
-.carousel .item button {
+.carousel2 .item2 button {
     width: 60px;
     height: 60px;
     border-radius: 100px;
@@ -537,13 +551,13 @@ svg:hover {
     top: 100px;
 }
 
-.carousel .item button svg {
+.carousel2 .item2 button svg {
     width: 24px;
     height: 24px;
     fill: #676d72
 }
 
-.carousel .item .rightbtn {
+.carousel2 .item2 .rightbtn {
     width: 60px;
     height: 60px;
     border-radius: 100px;
