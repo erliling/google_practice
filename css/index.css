@@ -1,3 +1,4 @@
+/* #region nav*/
 .nav {
     width: 100%;
     height: 56px;
@@ -71,13 +72,9 @@ svg:hover {
     background-color: aqua;
     margin-left: 24px;
 }
+/* #endregion seperator*/
 
-
-/* .banner {
-    width: 1392px;
-    height: 768px;
-    border-radius: 5px;
-} */
+/* #region banner*/
 
 .banner {
     width: 100%;
@@ -125,20 +122,10 @@ svg:hover {
     font-weight: 400;
     font-size: 16px;
 }
+/* #endregion banner*/
 
-.seperator {
-    height: 104px;
-}
-.title {
-    text-align: center;
-}
-.title h2 {
-    font-size: 40px;
-    font-weight: 600;
-}
-.seperator2 {
-    height: 60px;
-}
+/* #region carousel*/
+
 .carousel {
     width: 100%;
     height: 482px;
@@ -260,10 +247,10 @@ svg:hover {
     left: 20px;
     top: 100px;
 }
+/* #endregion carousel*/
 
-.seperator3 {
-    height: 24px;
-}
+/* #region grid*/
+
 .grid {
     display: grid;
     column-gap: 24px;
@@ -442,3 +429,160 @@ svg:hover {
     font-weight: 600;
     text-align: center;
 }
+/* #endregion grid*/
+
+/* #region carousel*/
+
+.carousel {
+    width: 100%;
+    height: 482px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items:center;
+}
+.carousel .hlist {
+    width: 1156px;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar{
+    height: 2px;
+    width: 4px;
+    background: rgb(195, 195, 195);
+}
+::-webkit-scrollbar-thumb:horizontal{
+    background: #000;
+    border-radius: 10px;
+}
+
+.carousel .item {
+    width: 212px;
+    height: 418px;
+    /* background-color: orange; */
+    position: relative;
+    margin: auto 15px 40px;
+}
+.carousel .item .pic {
+    width: 212px;
+    height: 252px;
+    background-color: #eff0f1;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.carousel .item img {
+    width: 212px;
+    /* height: 252px; */
+}
+.carousel .item .pic .newtag {
+    width: 40px;
+    height: 20px;
+    background-color: rgb(222, 225, 240);
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 15px;
+    left: 20px;;
+}
+
+.carousel .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.carousel .item .crossline {
+    text-decoration: line-through;
+    color: #676d72;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.carousel .item .tag {
+    width: 100px;
+    height: 20px;
+    background-color: rgb(208, 234, 222);
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.carousel .item .tag svg {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+.carousel .item a {
+    display: block;
+    font-size: 16px;
+    color: #1967d2;
+    position: absolute;
+    bottom: 15px;
+}
+.carousel .item button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #fff;
+    /* border: 1px solid #afb5ba; */
+    box-shadow: 2px 1px 10px 0.5px #afb5ba;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+.carousel .item button svg {
+    width: 24px;
+    height: 24px;
+    fill: #676d72
+}
+
+.carousel .item .rightbtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: #fff;
+    /* border: 1px solid #afb5ba; */
+    box-shadow: 2px 1px 10px 0.5px #afb5ba;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+}
+/* #endregion carousel*/
+
+/* #region common*/
+.seperator0 {
+    height: 120px;
+}
+
+.seperator {
+    height: 104px;
+}
+
+.seperator2 {
+    height: 60px;
+}
+
+.seperator21 {
+    height: 40px;
+}
+
+.seperator3 {
+    height: 24px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+/* #endregion common*/
