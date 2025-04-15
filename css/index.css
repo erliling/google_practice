@@ -590,7 +590,7 @@ svg:hover {
     justify-content: center;
 }
 
-.grid2  .titlesec {
+.grid2  .titlesec4 {
     width: 696px;
     height: 240px;
     /* margin: 0 118px; */
@@ -680,12 +680,12 @@ svg:hover {
     border-radius: 28px;
     /* box-sizing: border-box; */
     overflow: hidden;
-    /* position: relative; */
+    position: relative;
 }
 
 .grid3  .titlesec {
     width: 448px;
-    height: 280px;
+    height: 300px;
     margin: 0 118px;
     padding: 40px;
     box-sizing: border-box;
@@ -736,8 +736,8 @@ svg:hover {
     height: auto;
     /* overflow-clip-margin: content-box;
     overflow: clip; */
-    /* position: absolute;
-    bottom: 0px; */
+    position: absolute;
+    bottom: 0px;
 }
 /* #endregion grid3*/
 
@@ -786,6 +786,7 @@ svg:hover {
 }
 .grid2 span {
     text-align: center;
+    line-height: 20px;
 }
 .grid2 .tile3 img {
     width: 696px;
