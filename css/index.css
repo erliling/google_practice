@@ -431,7 +431,7 @@ svg:hover {
 }
 /* #endregion grid*/
 
-/* #region carousel*/
+/* #region carousel2*/
 
 .carousel2 {
     width: 100%;
@@ -521,6 +521,8 @@ svg:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+
 }
 
 .carousel2 .item2 button {
@@ -531,8 +533,8 @@ svg:hover {
     /* border: 1px solid #afb5ba; */
     box-shadow: 2px 1px 10px 0.5px #afb5ba;
     /* position: absolute;
-    right: 20px;
-    top: 100px; */
+    right: 20px; */
+    /* top: 100px; */
     
 
 }
@@ -550,8 +552,9 @@ svg:hover {
     background-color: #fff;
     /* border: 1px solid #afb5ba; */
     box-shadow: 2px 1px 10px 0.5px #afb5ba;
-    /* position: absolute;
-    left: 20px;
+    position: absolute;
+    right: 0;
+    /* left: 20px;
     top: 100px; */
 }
 .roundnav {
@@ -570,7 +573,7 @@ svg:hover {
 .roundnav .active {
     background-color: #676d72;
 }
-/* #endregion carousel*/
+/* #endregion carousel2*/
 
 /* #region grid2*/
 .grid2 {
