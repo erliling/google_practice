@@ -897,7 +897,21 @@ svg:hover {
 /* #endregion littlegrid2*/
 
 /* #region annotation*/
-
+.annotation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.annotation .content{
+    width: 1156px;
+    height: 120px;
+    font-size: 12px;
+    
+}
+.annotation .content ol {
+    list-style-type: decimal;
+}
 /* #endregion annotation*/
 
 /* #region common*/
