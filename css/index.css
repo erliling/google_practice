@@ -985,12 +985,12 @@ svg:hover {
 }
 .footer .content ul li {
     margin-left: 20px;
-    /* vertical-align: top; */
+    position: relative;
 }
 .footer .content ul li:first-child {
     margin-left: 0px;
 }
-/* .footer .content .icon {
+.footer .content .icon {
     width: 18px;
     height: 24px;
     background-image: url(https://ssl.gstatic.com/store/images/regionflags/us.png);
@@ -998,10 +998,15 @@ svg:hover {
     background-repeat: no-repeat;
 
     display: inline-block;
-    vertical-align: top;
-} */
+    /* vertical-align: top; */
+    /* margin-right: 12px; */
+    width: 24px;
+    position: absolute;
+    top: -1px;
+}
 .footer .content span {
-    padding-left: 8px;
+    margin-left: 34px;
+    /* vertical-align: top; */
 }
 .footer .svgicon {
     width: 20px;
