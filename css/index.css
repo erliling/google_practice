@@ -477,13 +477,6 @@ svg:hover {
     flex-direction: column;
     justify-content: space-between;
 }
-.carousel2 .item .pic {
-    /* width: 370px;
-    height: 370px;
-    background-color: #eff0f1;
-    border-radius: 28px; */
-    /* margin-bottom: 20px; */
-}
 .carousel2 .item img {
     width: 370px;
     /* height: 370px; */
