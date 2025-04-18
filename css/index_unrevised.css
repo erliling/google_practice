@@ -6,36 +6,29 @@
 .nav .content {
     width: 1440px;
     height: 100%;
+    /* background-color: orange; */
     margin: 0 auto;
     display: flex;
-    /* put elements on the left and right sides */
     justify-content: space-between;
     align-items: center;
 }
 .nav .content .navleft {
-    /* make elements on the left align with each other */
     display: flex;
-    /* justify-content: space-between; */
-    /* color: #3c4043; */
+    justify-content: space-between;
+    color: #3c4043;
 }
 .nav .content .navleft ul {
     display: flex;
     justify-content: space-between;
 
-    /* font: 14px "Google Sans", Arial, sans-serif; */
-    /* font-weight: 100; */
+    font: 14px "Google Sans", Arial, sans-serif;
+    font-weight: 100;
 }
 .nav .content .navleft ul li {
     padding-left: 24px;
     height: 56px;
     line-height: 56px;
 }
-.nav .content .navleft .svg1 {
-    width: 24px;
-    height: 24px;
-    margin-top: 12px;
-}
-
 .nav .content .navright ul{
     display: flex;
     justify-content: space-between;
@@ -44,38 +37,41 @@
     padding-left: 24px;
     height: 56px;
     line-height: 56px;
-    position: relative;
 }
 
 .nav .content .navright ul li:first-child {
     padding-left: 0px;
 }
 
-.nav .content .navright .svg {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    /* margin-top: 50%; */
-    /* margin-top: 7px; */
-}
-
-.nav .content .navright .svg:hover {
-    fill: #1967d2;
-}
-
 .nav .content .navright img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    /* vertical-align: middle; */
-
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%); 
-    /* margin-top: 50%; */
-    /* margin-top: 12px; */
+    margin-top: 12px;
+    
+}
+.svg1 {
+    width: 24px;
+    height: 24px;
+    margin-top: 12px;
 }
 
+.svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 7px;
+}
+svg:hover {
+    fill: #1967d2;
+}
+
+.svg2 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background-color: aqua;
+    margin-left: 24px;
+}
 /* #endregion seperator*/
 
 /* #region banner*/
