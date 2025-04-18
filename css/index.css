@@ -87,45 +87,23 @@
 .banner .content {
     width: 1440px;
     height: 100%;
-    /* background-color: orange; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative
+    position: relative;
 }
-.banner .content .textcontent {
+.banner .content .textcontent_position {
     position: absolute;
     top: 40px;
-    text-align: center;
-    color: #3c4043;
-    /* display: flex;
-    justify-content: center; */
 }
+
 .banner .content img {
     width: 1392px;
     height: 768px;
     border-radius: 30px;
 }
-.banner .content h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.banner .content h1 {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 30px;
 
-}
-
-.banner .content a {
-    /* display: block; */
-    border: 1.5px solid #3c4043;
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-weight: 400;
-    font-size: 16px;
-}
 /* #endregion banner*/
 
 /* #region carousel*/
@@ -1043,5 +1021,27 @@
 .title h2 {
     font-size: 40px;
     font-weight: 600;
+}
+
+.textcontent {
+    text-align: center;
+    color: #3c4043;
+}
+.textcontent h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.textcontent h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+.textcontent a {
+    border: 1.5px solid #3c4043;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 16px;
 }
 /* #endregion common*/
