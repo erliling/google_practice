@@ -472,9 +472,17 @@
 
 /* #region grid comb2*/
 .grid4 {
+    width: 100%;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid4 .content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 0 39px;
+    /* margin: 0 39px; */
+    width: 1440px;
     padding: 0 24px;
 }
 .grid4 .tile1 {
