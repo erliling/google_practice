@@ -109,21 +109,27 @@
 
 /* #region carousel*/
 
-.carousel {
+/* .carousel {
     width: 100%;
     height: 482px;
-    /* align horizontally */
     display: flex;
-    /* align-items:center; */
-}
+} */
 /* items in the middle */
-.carousel .hlist {
+/* .carousel .hlist {
     width: 1156px;
-    /* overflow: hidden; */
-    /* add horizontal scroll bar */
     overflow-x: scroll;
     display: flex;
     justify-content: space-between;
+} */
+
+/* add horizontal scroll bar */
+.carousel1 .hlist_adjust {
+    width: 1156px;
+    height: 460px;
+    overflow-x: scroll;
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 24px;
 }
 
 /* style of scroll bar */
@@ -137,23 +143,24 @@
     border-radius: 10px;
 }
 
-.carousel .item {
+.carousel1 .item {
     width: 212px;
     height: 418px;
     position: relative;
-    margin: auto 15px 40px;
+    padding: auto 15px 40px;
+    box-sizing: border-box;
 }
-.carousel .item .pic {
+.carousel1 .item .pic {
     width: 212px;
     height: 252px;
     background-color: #eff0f1;
     border-radius: 6px;
     margin-bottom: 20px;
 }
-.carousel .item img {
+.carousel1 .item img {
     width: 212px;
 }
-.carousel .item .pic .newtag {
+.carousel1 .item .pic .newtag {
     width: 40px;
     height: 20px;
     background-color: rgb(222, 225, 240);
@@ -166,20 +173,20 @@
     left: 20px;;
 }
 
-.carousel .item h3 {
+.carousel1 .item h3 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 14px;
 }
 
-.carousel .item .crossline {
+.carousel1 .item .crossline {
     text-decoration: line-through;
     color: #676d72;
     margin-left: 5px;
     font-size: 14px;
 }
 
-.carousel .item .tag {
+.carousel1 .item .tag {
     width: 100px;
     height: 20px;
     background-color: rgb(208, 234, 222);
@@ -189,13 +196,13 @@
     line-height: 20px;
     margin-top: 14px;
 }
-.carousel .item .tag svg {
+.carousel1 .item .tag svg {
     width: 14px;
     height: 14px;
     vertical-align: middle;
 }
 
-.carousel .item a {
+.carousel1 .item a {
     display: block;
     font-size: 16px;
     color: #1967d2;
@@ -205,15 +212,15 @@
 }
 
 /* nav buttons on both sides */
-.carousel .left_button_position {
+.carousel1 .left_button_position {
     position: absolute;
-    right: 20px;
+    right: 40px;
     top: 100px;
 }
 
-.carousel .right_button_position {
+.carousel1 .right_button_position {
     position: absolute;
-    left: 20px;
+    left: 40px;
     top: 100px;
 }
 
@@ -385,27 +392,12 @@
 
 /* #region carousel2*/
 
-.carousel2 {
-    width: 100%;
-    height: 480px;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items:center;
-}
+
 .carousel2 .content {
     width: 1400px;
     height: 100%;
     display: flex;
     margin: 0 auto;
-}
-.carousel2 .hlist {
-    width: 1156px;
-    overflow: hidden;
-    /* overflow-x: scroll; */
-    display: flex;
-    /* justify-content: space-between; */
-    column-gap: 24px;
-
 }
 
 .carousel2 .item {
@@ -1009,6 +1001,19 @@
     font-weight: 400;
     font-size: 16px;
 }
+.carousel {
+    width: 100%;
+    height: 480px;
+    display: flex;
+}
+
+.carousel .hlist {
+    width: 1156px;
+    overflow: hidden;
+    display: flex;
+    column-gap: 24px;
+
+}
 .carouselbutton {
     width: 60px;
     height: 60px;
@@ -1035,4 +1040,5 @@
     width: 100%;
     height: auto;
 }
+
 /* #endregion common*/
