@@ -762,14 +762,13 @@
 }
 .footernav .content{
     width: 1156px;
-    /* height: 340px; */
-    /* font-size: 12px; */
     
 }
 .footernav .footersvg {
     width: 180px;
     height: 32px;
 }
+/* nav columns */
 .footernav .navlinks {
     height: 100%;
     margin: 60px auto;
@@ -777,11 +776,13 @@
     justify-content: space-between;
     /* align-items: center; */
 }
+/* nav column's title */
 .footernav .navlinks dt {
     font-size: 16px;
     padding-bottom: 12px;
     font-weight: 600;
 }
+/* nav column's links */
 .footernav .navlinks dd {
     font-size: 14px;
     line-height: 48px;
@@ -794,7 +795,6 @@
     width: 100%;
 
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
 }
@@ -804,19 +804,22 @@
     padding: 16px 0;
     box-sizing: border-box;
 
+    /* nav seperates to left and right parts */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    /* seperator */
     border-top: 1px solid #eff0f1;
 
     font-size: 12px;
 }
 
+/* left side */
 .footer .content ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 .footer .content ul li {
     margin-left: 20px;
@@ -825,23 +828,23 @@
 .footer .content ul li:first-child {
     margin-left: 0px;
 }
+
+/* right side */
 .footer .content .icon {
-    width: 18px;
+    width: 24px;
     height: 24px;
     background-image: url(https://ssl.gstatic.com/store/images/regionflags/us.png);
     background-size: 100%;
     background-repeat: no-repeat;
 
     display: inline-block;
-    /* vertical-align: top; */
-    /* margin-right: 12px; */
-    width: 24px;
+
+    /* locate the first icon */
     position: absolute;
     top: -1px;
 }
 .footer .content span {
     margin-left: 34px;
-    /* vertical-align: top; */
 }
 .footer .svgicon {
     width: 20px;
