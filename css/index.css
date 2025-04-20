@@ -232,13 +232,13 @@
 /* nav buttons on both sides */
 .carousel1 .left_button_position {
     position: absolute;
-    left: 40px;
+    left: 30px;
     top: 100px;
 }
 
 .carousel1 .right_button_position {
     position: absolute;
-    right: 40px;
+    right: 30px;
     top: 100px;
 }
 
@@ -415,11 +415,21 @@
 /* #region carousel2*/
 
 
-.carousel2 .content {
+/* .carousel2 .content {
     width: 1400px;
     height: 100%;
     display: flex;
     margin: 0 auto;
+} */
+.carousel2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel2 .content_adjust {
+    position: relative;
 }
 
 .carousel2 .item {
@@ -447,7 +457,7 @@
     color: #1967d2;
 }
 
-.carousel2 .item2 {
+/* .carousel2 .item2 {
     width: 118px;
     height: 492px;
 
@@ -457,28 +467,35 @@
     position: relative;
 
     position: relative;
-}
+} */
 
 .carousel2 .carouselbutton_leftadjust {
     width: 48px;
     height: 48px;
 
     position: absolute;
-    right: 40px
+    left: 30px;
+    top: 50%;
 }
 .carousel2 .carouselbutton_rightadjust {
     width: 48px;
     height: 48px;
 
     position: absolute;
-    left: 40px
+    right: 30px;
+    top: 50%;
 }
 
 .roundnav {
     height: 24px;
+    
     display: flex;
     justify-content: center;
+
+    /* seperate dots */
     column-gap: 8px;
+
+    padding-top: 24px;
 }
 .roundnav .round {
     width: 8px;
@@ -506,6 +523,7 @@
     /* margin: 0 39px; */
     width: 1440px;
     padding: 0 24px;
+    box-sizing: border-box;
 }
 .grid4 .tile1 {
     width: 696px;
