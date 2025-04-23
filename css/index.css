@@ -852,6 +852,11 @@
     font-weight: 400;
     font-size: 16px;
 }
+.textcontent a:hover {
+    background-color: #e8e6e0;
+    color: #3c4043;
+    box-shadow: inset 0px 0px 1px 1px rgba(60, 64, 67, 0.25);
+}
 .carousel {
     width: 100%;
     height: 480px;
