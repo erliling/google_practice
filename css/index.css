@@ -157,6 +157,7 @@
     position: relative;
     padding: auto 15px 40px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .carousel1 .item .pic {
     width: 212px;
@@ -224,12 +225,27 @@
     position: absolute;
     left: 30px;
     top: 100px;
+
+    transition: opacity 0.25s;
+}
+.carousel1_left_button_hide {
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: 0;
 }
 
 .carousel1 .right_button_position {
     position: absolute;
     right: 30px;
     top: 100px;
+
+    transition: opacity 0.25s;
+}
+
+.carousel1_right_button_hide {
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: 0;
 }
 
 /* #endregion carousel*/
