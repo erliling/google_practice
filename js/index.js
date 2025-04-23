@@ -23,6 +23,10 @@ window.onload = function (event) {
     let carousel1rightbtn = document.getElementsByClassName("right_button_position")[0]
     hlistdom.addEventListener('scroll', function(event) {
         
+        // if (hlistdom.timer != null || undefined) {
+        //     clearInterval(hlistdom.timer);
+        //   }
+
         if (hlistdom.scrollLeft == 0) {
             // very left side
             // console.log("very left");
@@ -44,6 +48,26 @@ window.onload = function (event) {
                 removeClass(carousel1rightbtn, "carousel1_right_button_hide")
             }
         }
+    })
+
+    carousel1leftbtn.addEventListener('click', function(event) {
+        // console.log("left")
+
+        let target = hlistdom.scrollLeft - 212+24;
+        move(hlistdom, "scrollLeft", target, 10);
+
+        // hlistdom.scrollLeft -= 212+24;
+
+        
+    })
+
+    carousel1rightbtn.addEventListener('click', function(event) {
+        // console.log("right")
+
+        // hlistdom.scrollLeft += 212+24;
+
+        let target = hlistdom.scrollLeft + 212+24;
+        move(hlistdom, "scrollLeft", target, 10);
     })
 
 }

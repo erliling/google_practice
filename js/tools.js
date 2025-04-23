@@ -13,7 +13,8 @@ function move(obj, attr, target, speed, callback) {
     }
 
     // change move direction if possible
-    var current = parseInt(getStyle(obj, attr));
+    // var current = parseInt(getStyle(obj, attr));
+    var current = parseInt(obj[attr]);
     if(current > target) {
         speed = -speed;
       }
@@ -23,7 +24,8 @@ function move(obj, attr, target, speed, callback) {
       // get element style
       // const cssObj = window.getComputedStyle(obj, null);
       // var oldValue = parseInt(cssObj.getPropertyValue(attr));
-      var oldValue = parseInt(getStyle(obj, attr));
+      // var oldValue = parseInt(getStyle(obj, attr));
+      var oldValue = parseInt(obj[attr]);
 
       var newValue = oldValue + speed;
 
@@ -35,6 +37,7 @@ function move(obj, attr, target, speed, callback) {
         newValue = target;
       }
 
+      obj[attr] = newValue;
       obj.style[attr] = newValue + "px";
 
       // delete timer when meets target, then call callback fun
