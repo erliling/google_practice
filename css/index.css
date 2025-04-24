@@ -382,7 +382,7 @@
 }
 
 .carousel2 .hlist_adjust {
-    width: 1156px;
+    width: 1300px;
     height: 460px;
     overflow-x: scroll;
     display: flex;
@@ -390,7 +390,7 @@
 }
 
 .carousel2 .hlist_adjust::-webkit-scrollbar{
-    display: none;
+    /* display: none; */
 }
 
 .carousel2 .item {

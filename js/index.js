@@ -86,8 +86,45 @@ window.onload = function (event) {
     let carousel2hlistdom = document.querySelectorAll(".carousel2 .hlist")[0];
     let carousel2leftbtn = document.getElementsByClassName("carouselbutton_leftadjust")[0]
     let carousel2rightbtn = document.getElementsByClassName("carouselbutton_rightadjust")[0]
+    let previousScrollLeft = carousel2hlistdom.scrollLeft;
+
+    carousel2leftbtn.addEventListener('click', function(event) {
+        carousel2hlistdom.scrollBy({
+            top: 0,
+            left: -3*(370+24),
+            behavior: "smooth"
+        })
+    })
+
+    carousel2rightbtn.addEventListener('click', function(event) {
+        carousel2hlistdom.scrollBy({
+            top: 0,
+            left: 3*(370+24),
+            behavior: "smooth"
+        })
+    })
+
     carousel2hlistdom.addEventListener('scroll', function(event) {
-        console.log("here")
+        let currentScrollLeft = carousel2hlistdom.scrollLeft;
+
+        if(currentScrollLeft > previousScrollLeft) {
+            console.log("scroll right");
+            
+
+            // let distance = 3 * (370 + 24);
+            // let target = parseInt(hlistdom.scrollLeft + distance);
+            // // target doesn't exceed the very right
+            // if (target >= (hlistdom.scrollWidth - hlistdom.clientWidth)) {
+            //     target = hlistdom.scrollWidth - hlistdom.clientWidth;
+            // }
+            // move(hlistdom, "scrollLeft", target, 10);
+            // carousel2hlistdom.scrollLeft += 100;
+            // event.preventDefault();
+        } else if(currentScrollLeft < previousScrollLeft) {
+            console.log("scroll left");
+        }
+
+        previousScrollLeft = currentScrollLeft;
 
         // if (hlistdom.scrollLeft == 0) {
         //     // very left side
