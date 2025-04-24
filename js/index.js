@@ -22,8 +22,6 @@ window.onload = function (event) {
     let carousel1leftbtn = document.getElementsByClassName("left_button_position")[0]
     let carousel1rightbtn = document.getElementsByClassName("right_button_position")[0]
     hlistdom.addEventListener('scroll', function(event) {
-        
-        
 
         if (hlistdom.scrollLeft == 0) {
             // very left side
@@ -76,14 +74,39 @@ window.onload = function (event) {
     carousel1rightbtn.addEventListener('click', function(event) {
         // console.log("right")
 
-        // hlistdom.scrollLeft += 212+24;
-
         let target = parseInt(hlistdom.scrollLeft + 212+24);
         // target doesn't exceed the very right
         if (target >= (hlistdom.scrollWidth - hlistdom.clientWidth)) {
             target = hlistdom.scrollWidth - hlistdom.clientWidth;
         }
         move(hlistdom, "scrollLeft", target, 10);
+    })
+
+
+    let carousel2hlistdom = document.querySelectorAll(".carousel2 .hlist")[0];
+    let carousel2leftbtn = document.getElementsByClassName("carouselbutton_leftadjust")[0]
+    let carousel2rightbtn = document.getElementsByClassName("carouselbutton_rightadjust")[0]
+    carousel2hlistdom.addEventListener('scroll', function(event) {
+        console.log("here")
+
+        // if (hlistdom.scrollLeft == 0) {
+        //     // very left side
+        //     if (!hasClass(carousel1leftbtn, "carousel1_left_button_hide")) {
+        //         addClass(carousel1leftbtn, "carousel1_left_button_hide")
+        //     } 
+        // } else if (hlistdom.scrollLeft + hlistdom.clientWidth >= hlistdom.scrollWidth) {
+        //     // very right side
+        //     if (!hasClass(carousel1rightbtn, "carousel1_right_button_hide")) {
+        //         addClass(carousel1rightbtn, "carousel1_right_button_hide")
+        //     }
+        // } else {
+        //     if (hasClass(carousel1leftbtn, "carousel1_left_button_hide")) {
+        //         removeClass(carousel1leftbtn, "carousel1_left_button_hide")
+        //     } 
+        //     if (hasClass(carousel1rightbtn, "carousel1_right_button_hide")) {
+        //         removeClass(carousel1rightbtn, "carousel1_right_button_hide")
+        //     }
+        // }
     })
 
 }

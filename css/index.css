@@ -142,11 +142,11 @@
 }
 
 /* style of scroll bar */
-::-webkit-scrollbar{
+.carousel1 .hlist_adjust::-webkit-scrollbar{
     height: 2px;
     background: rgb(195, 195, 195);
 }
-::-webkit-scrollbar-thumb:horizontal{
+.carousel1 .hlist_adjust::-webkit-scrollbar-thumb:horizontal{
     background: #000;
     border-radius: 10px;
 }
@@ -379,6 +379,18 @@
 
 .carousel2 .content_adjust {
     position: relative;
+}
+
+.carousel2 .hlist_adjust {
+    width: 1156px;
+    height: 460px;
+    overflow-x: scroll;
+    display: flex;
+    column-gap: 24px;
+}
+
+.carousel2 .hlist_adjust::-webkit-scrollbar{
+    display: none;
 }
 
 .carousel2 .item {
@@ -890,7 +902,7 @@
 
 .carousel .hlist {
     width: 1156px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     column-gap: 24px;
 
