@@ -23,21 +23,29 @@ window.onload = function (event) {
     let carousel1rightbtn = document.getElementsByClassName("right_button_position")[0]
     hlistdom.addEventListener('scroll', function(event) {
         
-        // if (hlistdom.timer != null || undefined) {
-        //     clearInterval(hlistdom.timer);
-        //   }
+        
 
         if (hlistdom.scrollLeft == 0) {
             // very left side
             // console.log("very left");
             if (!hasClass(carousel1leftbtn, "carousel1_left_button_hide")) {
                 addClass(carousel1leftbtn, "carousel1_left_button_hide")
+
+                // stop timer set by click
+                // if (hlistdom.timer != null || undefined) {
+                //     // clearInterval(hlistdom.timer);
+                //   }
             } 
         } else if (hlistdom.scrollLeft + hlistdom.clientWidth >= hlistdom.scrollWidth) {
             // very right side
             // console.log("very right");
             if (!hasClass(carousel1rightbtn, "carousel1_right_button_hide")) {
                 addClass(carousel1rightbtn, "carousel1_right_button_hide")
+
+                // stop timer set by click
+                // if (hlistdom.timer != null || undefined) {
+                //     // clearInterval(hlistdom.timer);
+                //   }
             }
         } else {
             // console.log("middle");
@@ -53,7 +61,11 @@ window.onload = function (event) {
     carousel1leftbtn.addEventListener('click', function(event) {
         // console.log("left")
 
-        let target = hlistdom.scrollLeft - 212+24;
+        let target = parseInt(hlistdom.scrollLeft - 212+24);
+        // target doesn't exceed the very left
+        if (target <= 0) {
+            target = 0;
+        }
         move(hlistdom, "scrollLeft", target, 10);
 
         // hlistdom.scrollLeft -= 212+24;
@@ -66,7 +78,11 @@ window.onload = function (event) {
 
         // hlistdom.scrollLeft += 212+24;
 
-        let target = hlistdom.scrollLeft + 212+24;
+        let target = parseInt(hlistdom.scrollLeft + 212+24);
+        // target doesn't exceed the very right
+        if (target >= (hlistdom.scrollWidth - hlistdom.clientWidth)) {
+            target = hlistdom.scrollWidth - hlistdom.clientWidth;
+        }
         move(hlistdom, "scrollLeft", target, 10);
     })
 
