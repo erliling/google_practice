@@ -104,63 +104,89 @@ window.onload = function (event) {
         })
     })
 
-    // carousel2hlistdom.addEventListener('wheel', function(event) {
-    //     event.preventDefault();
-        
-    //     let currentScrollLeft = carousel2hlistdom.scrollLeft;
-    //     let distance = 3 * (370 + 24);
-
-    //     carousel2hlistdom.scrollBy({
-    //         top: 0,
-    //         left: -distance,
-    //         behavior: "smooth"
-    //     })
-
-    //     // if(currentScrollLeft > previousScrollLeft) {
-    //     if(event.deltaX > 0) {
-    //         console.log("scroll right1");
-            
-    //     } else if(event.deltaX < 0) {
-    //         console.log("scroll left1");
-
-    //         // target = parseInt(currentScrollLeft - distance);
-
-    //         // carousel2hlistdom.scrollBy({
-    //         //     top: 0,
-    //         //     left: -distance,
-    //         //     behavior: "smooth"
-    //         // })
+    // carousel2hlistdom.addEventListener('touchstart', (event) => {
+    //     if (event.touches.length >= 2) {
+    //         console.log("come here")
     //     }
-
     // })
 
-    let roundnavs = Array.from(document.getElementsByClassName("round"));
-    
+    let isAutoScroling = false;
+    // carousel2hlistdom.addEventListener('wheel', function(event) {
+    //     console.log("manual scroll")
+    // })
+
+
+    carousel2hlistdom.addEventListener('wheel', function(event) {
+        event.preventDefault();
+        
+        let currentScrollLeft = carousel2hlistdom.scrollLeft;
+        let distance = 3 * (370 + 24);
+
+        carousel2hlistdom.scrollBy({
+            top: 0,
+            left: -distance,
+            behavior: "smooth"
+        })
+
+        // if(currentScrollLeft > previousScrollLeft) {
+        if(event.deltaX > 0) {
+            console.log("scroll right1");
+            // target = parseInt(currentScrollLeft + distance);
+            // // target doesn't exceed the very right
+            // if (target >= (hlistdom.scrollWidth - hlistdom.clientWidth)) {
+            //     target = hlistdom.scrollWidth - hlistdom.clientWidth;
+            // }
+            // move(hlistdom, "scrollLeft", target, 10);
+            // carousel2hlistdom.scrollLeft += 100;
+        } else if(event.deltaX < 0) {
+            console.log("scroll left1");
+            
+
+            // // if (target == 0) {
+            // target = parseInt(currentScrollLeft - distance);
+            // // } 
+
+            // carousel2hlistdom.scrollBy({
+            //     top: 0,
+            //     left: -distance,
+            //     behavior: "smooth"
+            // })
+        }
+
+        // previousScrollLeft = currentScrollLeft;
+
+        // if (hlistdom.scrollLeft == 0) {
+        //     // very left side
+        //     if (!hasClass(carousel1leftbtn, "carousel1_left_button_hide")) {
+        //         addClass(carousel1leftbtn, "carousel1_left_button_hide")
+        //     } 
+        // } else if (hlistdom.scrollLeft + hlistdom.clientWidth >= hlistdom.scrollWidth) {
+        //     // very right side
+        //     if (!hasClass(carousel1rightbtn, "carousel1_right_button_hide")) {
+        //         addClass(carousel1rightbtn, "carousel1_right_button_hide")
+        //     }
+        // } else {
+        //     if (hasClass(carousel1leftbtn, "carousel1_left_button_hide")) {
+        //         removeClass(carousel1leftbtn, "carousel1_left_button_hide")
+        //     } 
+        //     if (hasClass(carousel1rightbtn, "carousel1_right_button_hide")) {
+        //         removeClass(carousel1rightbtn, "carousel1_right_button_hide")
+        //     }
+        // }
+    })
+
 
     carousel2hlistdom.addEventListener('scrollend', function(event) {
         let currentScrollLeft = carousel2hlistdom.scrollLeft;
 
-        let activeroundnav = document.querySelectorAll(".roundnav .active")[0];
-        let activeindex = roundnavs.indexOf(activeroundnav)
-
         if(currentScrollLeft > previousScrollLeft) {
             console.log("scroll right2");
-            let newindex = ((activeindex + 1) < roundnavs.length-1) ? (activeindex + 1) : (roundnavs.length - 1);
-            changeActiveRoundnav(activeroundnav, newindex);
-
         } else if(currentScrollLeft < previousScrollLeft) {
             console.log("scroll left2");
-            let newindex = ((activeindex - 1) > 0) ? (activeindex - 1) : 0;
-            changeActiveRoundnav(activeroundnav, newindex);
+
         }
 
         previousScrollLeft = currentScrollLeft;
     })
-
-    function changeActiveRoundnav (activeroundnav, newindex) {
-        removeClass(activeroundnav, "active");
-        let newactiveroundnav = roundnavs[newindex];
-        addClass(newactiveroundnav, "active");
-    }
 
 }

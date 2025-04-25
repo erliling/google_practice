@@ -387,10 +387,12 @@
     overflow-x: scroll;
     display: flex;
     column-gap: 24px;
+
+    scroll-snap-type: x mandatory;
 }
 
 .carousel2 .hlist_adjust::-webkit-scrollbar{
-    /* display: none; */
+    display: none;
 }
 
 .carousel2 .item {
@@ -401,6 +403,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.carousel2 .item_align {
+    scroll-snap-align: start;
 }
 .carousel2 .item img {
     width: 370px;
