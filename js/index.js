@@ -104,24 +104,41 @@ window.onload = function (event) {
         })
     })
 
+    // carousel2hlistdom.addEventListener('touchstart', (event) => {
+    //     if (event.touches.length >= 2) {
+    //         console.log("come here")
+    //     }
+    // })
+
     carousel2hlistdom.addEventListener('scroll', function(event) {
         let currentScrollLeft = carousel2hlistdom.scrollLeft;
 
         if(currentScrollLeft > previousScrollLeft) {
-            console.log("scroll right");
+            console.log("scroll right1");
             
 
-            // let distance = 3 * (370 + 24);
-            // let target = parseInt(hlistdom.scrollLeft + distance);
+            let distance = 3 * (370 + 24);
+            let target = parseInt(hlistdom.scrollLeft + distance);
             // // target doesn't exceed the very right
             // if (target >= (hlistdom.scrollWidth - hlistdom.clientWidth)) {
             //     target = hlistdom.scrollWidth - hlistdom.clientWidth;
             // }
             // move(hlistdom, "scrollLeft", target, 10);
             // carousel2hlistdom.scrollLeft += 100;
-            // event.preventDefault();
         } else if(currentScrollLeft < previousScrollLeft) {
-            console.log("scroll left");
+            console.log("scroll left1");
+
+            let distance = 3 * (370 + 24);
+            // let target = parseInt(carousel2hlistdom.scrollLeft - distance);
+            
+
+            carousel2hlistdom.scrollTo({
+                top: 0,
+                left: 3000,
+                behavior: "smooth"
+            })
+            // event.preventDefault();
+
         }
 
         previousScrollLeft = currentScrollLeft;
@@ -144,6 +161,20 @@ window.onload = function (event) {
         //         removeClass(carousel1rightbtn, "carousel1_right_button_hide")
         //     }
         // }
+    })
+
+
+    carousel2hlistdom.addEventListener('scrollend', function(event) {
+        let currentScrollLeft = carousel2hlistdom.scrollLeft;
+
+        if(currentScrollLeft > previousScrollLeft) {
+            console.log("scroll right2");
+        } else if(currentScrollLeft < previousScrollLeft) {
+            console.log("scroll left2");
+
+        }
+
+        previousScrollLeft = currentScrollLeft;
     })
 
 }
