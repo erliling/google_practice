@@ -148,13 +148,30 @@
 
 .carousel1 .content_adjust {
     position: relative;
+
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - 2em); 
+
+    background-color: orange;
+    overflow: hidden;
+}
+.carousel1 img {
+    /* max-width: 100%;
+    height: 100%; */
+    /* display: block; */
+    width: 100%;
+    object-fit: contain;
 }
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
-    max-width: 1156px;
+    width: 1156px;
+    max-width: calc(100% - 2em); 
     height: 460px;
     overflow-x: scroll;
+    
     display: flex;
     column-gap: 24px;
 }
