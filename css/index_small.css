@@ -152,7 +152,7 @@
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
-    width: 1156px;
+    max-width: 1156px;
     height: 460px;
     overflow-x: scroll;
     display: flex;
@@ -170,7 +170,8 @@
 }
 
 .carousel1 .item {
-    width: 212px;
+    min-width: 160px;
+    max-width: 212px;
     height: 418px;
     position: relative;
     padding: auto 15px 40px;
@@ -178,14 +179,15 @@
     cursor: pointer;
 }
 .carousel1 .item .pic {
-    width: 212px;
-    height: 252px;
+    /* width: 212px;
+    height: 252px; */
     background-color: #eff0f1;
     border-radius: 6px;
     margin-bottom: 20px;
 }
 .carousel1 .item img {
-    width: 212px;
+    width: 100%;
+    height: auto;
 }
 .carousel1 .item .pic .newtag {
     width: 40px;
