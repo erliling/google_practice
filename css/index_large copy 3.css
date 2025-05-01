@@ -138,9 +138,6 @@
 /* #endregion banner*/
 
 /* #region carousel*/
-body {
-    overflow-x: hidden;
-}
 .carousel1 {
     width: 100%;
     display: flex;
@@ -156,29 +153,31 @@ body {
     margin: 0 auto;
     max-width: calc(100% - 2em); 
 
-    /* background-color: orange; */
+    background-color: orange;
 
 }
-/* 
-@property --_x {
-    syntax: "<number>";
-    inherits: true;
-    initial-value: 0; 
-  }
-@property --w {
-    syntax: "<integer>";
-    inherits: true;
-    initial-value: 0; 
-  } */
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
+    /* max-width: 1156px;
+    min-width: 800px; */
+    /* max-width: calc(100% - 2em);  */
+    /* width: 1156px; */
     height: 460px;
     overflow-x: scroll;
-    /* --w: calc(1/(1-var(--_x))); */
     
     display: flex;
     column-gap: 24px;
+
+    /* display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr); */
+
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-auto-flow:column;  */
+
+    /* width: fit-content; */
+    
 }
 
 /* style of scroll bar */
@@ -192,13 +191,30 @@ body {
 }
 
 .carousel1 .item {
+    /* grid-column-end: span 3;
+    grid-row: 1; */
+
+
+    /* grid-row: 1 / 1; */
+    /* flex: 25%; */
+    /* column-span: 3; */
+    /* width: 212px; */
+    /* width: calc(calc(((min((100vw - 18px), 1440px)) - 312px) / 12)*2 + 24px*1); */
+    /* min-width: 160px;
+    max-width: 212px; */
+    
+    /* width: 20%; */
+    /* width: 212px; */
+
+    /* width: 20%; */
+    /* width: 212px; */
     height: 418px;
     position: relative;
     padding: auto 15px 40px;
     box-sizing: border-box;
     cursor: pointer;
 
-    /* background-color: green; */
+    background-color: green;
 
     --scrollbar-width: 18px;
     --shrinked-margin-width: 1em;
@@ -209,14 +225,31 @@ body {
     --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
 
+    /* width: fit-content; */
 }
 
 .carousel1 .item img {
+    /* width: 212px; */
+    /* max-width: 231px; */
+    /* width: auto; */
+    /* width: 100%; */
+    /* width: calc((100vw - 2em) / 5 - 2*24px); */
+    /* width: calc(calc(((min((100vw - 18px), 1440px)) - 312px) / 12)*2 + 24px*1); */
     width: var(--bento-grid-width-2);
+    /* width: fit-content; */
+    /* height: 252px; */
     height: auto;
     background-color: #eff0f1;
     border-radius: 6px;
     margin-bottom: 20px;
+    /* display: none; */
+    /* width: 20%; */
+
+    /* max-width: 100%;
+    height: auto; */
+    /* max-width: 100px; */
+    /* width: 212px; */
+    /* height: 100%; */
     object-fit: contain;
 }
 .carousel1 .item .pic .newtag {
