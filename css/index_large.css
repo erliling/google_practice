@@ -151,12 +151,10 @@ body {
 .carousel1 .content_adjust {
     position: relative;
 
-    /* width: 1440px; */
     height: 100%;
     margin: 0 auto;
     max-width: calc(100% - 2em); 
 
-    /* background-color: orange; */
 
 }
 /* 
@@ -198,17 +196,26 @@ body {
     box-sizing: border-box;
     cursor: pointer;
 
-    /* background-color: green; */
-
+    /* scrollbar's width on the right side */
     --scrollbar-width: 18px;
-    --shrinked-margin-width: 1em;
-    --fixed-margin-width: 118px;
-    /* --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - 312px) / 12); */
-    --grid-column-width: calc(((min(calc(100vw - var(--shrinked-margin-width, 0px) - var(--fixed-margin-width, 0px)), 1156px)) ) / 12);
+    
     --grid-gap: 24px;
+
+    /* --shrinked-margin-width: 1em;
+    --fixed-margin-width: 118px; */
+
+    /* if the whole viewport > 1440, Locks the layout at 1440px max on larger displays
+    otherwise, Ensures fluid width on smaller screens (e.g. laptops, tablets) 
+    divide the whole screen to 12 columns + 11 gaps inbetween + 2 gaps on the sides
+    so the max content = 1440 - 2*24px = 1392px*/
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    /* --grid-column-width: calc(((min(calc(100vw - var(--shrinked-margin-width, 0px) - var(--fixed-margin-width, 0px)), 1156px)) ) / 12); */
     --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
 
+}
+.carousel1 .item .pic {
+    /* height: 250px; */
 }
 
 .carousel1 .item img {
@@ -960,6 +967,7 @@ body {
     margin: 0 auto;
 }
 .carousel .content {
+    /* width: 1440px; */
     width: 1392px;
     padding: 0 118px;
     box-sizing: border-box;
@@ -969,6 +977,7 @@ body {
 }
 
 .carousel .hlist {
+    /* like a window to the 12 column grid */
     width: 1156px;
     /* overflow: hidden; */
     display: flex;
