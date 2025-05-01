@@ -40,6 +40,7 @@
     justify-content: space-between;
 }
 .nav .content .navleft ul li {
+    /* padding-left: 24px; */
     padding-right: 24px;
     height: 56px;
     line-height: 56px;
@@ -48,7 +49,7 @@
     padding-right: 0;
 }
 
-.nav .content .navleft .invisible2 {
+.nav .content .navleft .invisible1 {
     display: none;
 }
 
@@ -56,6 +57,11 @@
     width: 24px;
     height: 24px;
     vertical-align: middle;
+    /* display: none; */
+
+    /* position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); */
 }
 
 .nav .content .navright ul{
@@ -98,16 +104,15 @@
 
 .banner {
     width: 100%;
-    /* height: 768px; */
-    max-height: 768px;
     /* height: 100%; */
+    max-height: 768px;
+    /* height: 768px; */
 }
 .banner .content {
-    max-width: 1440px;
+    width: 1440px;
     height: 100%;
     margin: 0 auto;
     max-width: calc(100% - 2em); 
-    
     /* margin: 0 max(10vw, 20px); */
     
     display: flex;
@@ -119,11 +124,6 @@
     position: absolute;
     top: 40px;
     height: 156px;
-
-}
-
-.banner .content .textcontent .h1_adjust {
-    font-size: 28px;
 }
 
 .banner .content img {
@@ -155,28 +155,28 @@
     max-width: calc(100% - 2em); 
 
     background-color: orange;
-    /* overflow: hidden; */
-    /* object-fit: contain; */
 
-}
-.carousel1 img {
-    /* max-width: 100%;
-    height: 100%; */
-    /* display: block; */
-    /* width: 25%; */
-    /* width: auto; */
-    /* object-fit: contain; */
 }
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
-    width: 1156px;
+    /* max-width: 1156px;
+    min-width: 800px; */
     /* max-width: calc(100% - 2em);  */
     height: 460px;
     overflow-x: scroll;
     
-    display: flex;
+    /* display: flex;
+    column-gap: 24px; */
+    display: grid;
     column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-row: 1; */
+    /* grid-auto-flow:column;  */
+
+    /* width: fit-content; */
+    
 }
 
 /* style of scroll bar */
@@ -190,8 +190,16 @@
 }
 
 .carousel1 .item {
-    /* min-width: 160px; */
-    width: 20%;
+    grid-column-end: span 3;
+    /* grid-row: 1 / 1; */
+    /* flex: 25%; */
+    /* column-span: 3; */
+    /* width: 212px; */
+    /* width: calc(calc(((min((100vw - 18px), 1440px)) - 312px) / 12)*2 + 24px*1); */
+    /* min-width: 160px;
+    max-width: 212px; */
+    
+    /* width: 20%; */
     height: 418px;
     position: relative;
     padding: auto 15px 40px;
@@ -199,12 +207,16 @@
     cursor: pointer;
 
     background-color: green;
-
-    /* flex-grow: 1;
-    flex-shrink: 1; */
 }
 .carousel1 .item .pic {
-    width: 100%;
+    /* display: none; */
+    /* width: 100%; */
+    /* max-width: 212px;
+    min-width: 160px; */
+    /* width: 212px; */
+    /* width: fit-content; */
+    /* width: max-content; */
+
     height: auto;
     /* width: 20%; */
     background-color: #eff0f1;
@@ -212,13 +224,15 @@
     margin-bottom: 20px;
 }
 .carousel1 .item img {
+    /* display: none; */
     /* width: 20%; */
-    display: block;
-    margin: auto;
-    
-    /* max-width: 212px; */
+
+    max-width: 100%;
     height: auto;
-    object-fit: contain;
+    /* max-width: 100px; */
+    /* width: 212px; */
+    /* height: 100%; */
+    object-fit: cover;
 }
 .carousel1 .item .pic .newtag {
     width: 40px;

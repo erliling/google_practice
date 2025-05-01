@@ -149,34 +149,36 @@
 .carousel1 .content_adjust {
     position: relative;
 
-    width: 1440px;
+    /* width: 1440px;
     height: 100%;
     margin: 0 auto;
-    max-width: calc(100% - 2em); 
+    max-width: calc(100% - 2em);  */
 
     background-color: orange;
-    overflow: hidden;
-    object-fit: contain;
 
-}
-.carousel1 img {
-    /* max-width: 100%;
-    height: 100%; */
-    /* display: block; */
-    width: 25%;
-    /* width: auto; */
-    object-fit: contain;
 }
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
+    /* max-width: 1156px;
+    min-width: 800px; */
+    /* max-width: calc(100% - 2em);  */
     width: 1156px;
-    max-width: calc(100% - 2em); 
     height: 460px;
     overflow-x: scroll;
     
     display: flex;
     column-gap: 24px;
+
+    /* display: grid;
+    column-gap: 24px;
+    grid-template-columns: repeat(12, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-row: 1; */
+    /* grid-auto-flow:column;  */
+
+    /* width: fit-content; */
+    
 }
 
 /* style of scroll bar */
@@ -190,27 +192,43 @@
 }
 
 .carousel1 .item {
-    /* min-width: 160px; */
-    max-width: 212px;
+    /* grid-column-end: span 3; */
+
+    /* grid-row: 1 / 1; */
+    /* flex: 25%; */
+    /* column-span: 3; */
+    /* width: 212px; */
+    /* width: calc(calc(((min((100vw - 18px), 1440px)) - 312px) / 12)*2 + 24px*1); */
+    /* min-width: 160px;
+    max-width: 212px; */
+    
+    /* width: 20%; */
+    width: 212px;
+
     height: 418px;
     position: relative;
     padding: auto 15px 40px;
     box-sizing: border-box;
     cursor: pointer;
 
-    flex-grow: 1;
-    flex-shrink: 1;
+    background-color: green;
 }
-.carousel1 .item .pic {
-    /* width: 212px;
-    height: 252px; */
+
+.carousel1 .item img {
+    width: 212px;
+    height: 252px;
     background-color: #eff0f1;
     border-radius: 6px;
     margin-bottom: 20px;
-}
-.carousel1 .item img {
-    max-width: 212px;
-    height: auto;
+    /* display: none; */
+    /* width: 20%; */
+
+    /* max-width: 100%;
+    height: auto; */
+    /* max-width: 100px; */
+    /* width: 212px; */
+    /* height: 100%; */
+    /* object-fit: cover; */
 }
 .carousel1 .item .pic .newtag {
     width: 40px;
