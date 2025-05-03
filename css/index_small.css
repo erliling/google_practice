@@ -320,9 +320,21 @@ body {
 /* #endregion carousel*/
 
 /* #region grid comb1*/
+.grid1 .content {
+    /* height: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - 2em);  */
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    row-gap: 24px;
+
+}
 
 .grid1 .tile1 {
-    height: 802px;
+    width: 450px;
+    /* margin: 0 118px; */
     background-color: #F5F3EF;
 
     /* organize the grid layout */
@@ -335,31 +347,40 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
+    row-gap: 32px;
+
 }
 
 
 .grid1  .textcontent_position {
-    width: 448px;
-    height: 280px;
-    margin: 0 118px;
-    padding: 40px;
+    height: auto;
+    
+    padding: 40px 40px 0;
     box-sizing: border-box;
-}
-/* 
-.grid1 .h4_adjust {
-    font-size: 14px;
-} */
 
+    row-gap: 24px;
+}
 
 .grid1   .h1_adjust {
-
+    /* max-width: (100vw - 48px); */
     font-size: 40px;
     font-weight: 600;
 }
 
+.grid2 .content {
+    /* height: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - 2em);  */
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    row-gap: 24px;
+}
+
 .grid2 .tile2 {
-    height: 683px;
-    max-height: 683px;
+    width: 450px;
+    /* height: 800px; */
     background-color: #F5F3EF;
 
     /* grid layout */
@@ -372,57 +393,70 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
+    /* row-gap: 32px; */
     /* move the pic up */
-    position: relative;
+    /* position: relative; */
 
 }
 .grid2  .textcontent_position {
-    height: 148px;
-    padding: 40px;
+    height: auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    padding: 40px 40px 0;
+    box-sizing: border-box;
+
+    row-gap: 24px;
 
     /* make the textcontent float so img can move up */
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -0%);
+    transform: translate(-50%, -0%); */
 }
 
 .grid2   .h1_adjust {
-    max-width: 580px;
+    /* max-width: 580px; */
 
     font-size: 40px;
     font-weight: 600;
 }
 
+.grid3 .content {
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    row-gap: 24px;
+}
+
 .grid3 .tile3 {
-    height: 802px;
+    width: 450px;
     background-color: #F5F3EF;
     border-radius: 28px;
 
     /* grid layout */
     grid-column-end: span 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 32px;
 }
 
-.grid3  .textcontent_position {
-    width: 448px;
-    height: 280px;
-    margin: 0 auto;
-    padding: 40px;
+.grid3 .textcontent_position {
+    height: auto;
+    padding: 40px 40px 0;
     box-sizing: border-box;
+
+    row-gap: 24px;
 }
 
-.grid3   .h1_adjust {
+.grid3 .h1_adjust {
 
     font-size: 40px;
     font-weight: 600;
 }
 
-.grid3  .textcontent_position2 {
+/* .grid3  .textcontent_position2 {
     width: 448px;
     height: 240px;
     margin: 0 auto;
@@ -434,7 +468,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-}
+} */
 /* #endregion grid*/
 
 /* #region carousel2*/
