@@ -481,16 +481,20 @@ body {
 
 .carousel2 .content_adjust {
     position: relative;
+
+    height: 100%;
+    margin: 0 auto;
+    max-width: calc(100% - 2em); 
 }
 
 .carousel2 .hlist_adjust {
-    width: 1300px;
-    height: 460px;
+    /* width: 1300px; */
+    /* height: 460px; */
     overflow-x: scroll;
     display: flex;
     column-gap: 24px;
 
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
 }
 
 .carousel2 .hlist_adjust::-webkit-scrollbar{
@@ -498,19 +502,28 @@ body {
 }
 
 .carousel2 .item {
-    width: 370px;
-    height: 420px;
+    /* width: 370px;
+    height: 420px; */
    
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 36px;
+
+    --scrollbar-width: 18px;
+    --grid-gap: 24px;
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
+    --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
+    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
 }
 .carousel2 .item_align {
     scroll-snap-align: start;
 }
 .carousel2 .item img {
-    width: 370px;
+    width: var(--bento-grid-width-3);
+    height: auto;
     border-radius: 28px;
 }
 
