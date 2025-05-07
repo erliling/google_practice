@@ -888,7 +888,8 @@ body {
     display: grid;
     row-gap: 10px;
 
-    list-style-position: inside;
+    /* list-style-position: inside; */
+    padding-left: 20px;
     /* padding-left: 100px;
     margin-left: 60px;*/
 }
@@ -897,15 +898,28 @@ body {
 /* #region footernav*/
 .footernav {
     width: 100%;
-    height: 480px;
+    height: auto;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .footernav .content{
-    width: 1156px;
-    
+    /* width: 1156px; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 60px;
+    padding-bottom: 60px; */
+    padding: 60px 0;
+
+    --scrollbar-width: 18px;
+    --grid-gap: 24px;
+
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
+    --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
+    --bento-grid-width-9: calc(var(--grid-column-width) * 9 + var(--grid-gap) * 8);
 }
 .footernav .footersvg {
     width: 180px;
@@ -913,10 +927,16 @@ body {
 }
 /* nav columns */
 .footernav .navlinks {
+    width: var(--bento-grid-width-9);
     height: 100%;
-    margin: 60px auto;
-    display: flex;
+    padding-top: 60px;
+    /* margin: 60px auto; */
+    /* display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 /* nav column's title */
 .footernav .navlinks dt {
