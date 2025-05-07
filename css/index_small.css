@@ -494,6 +494,9 @@ body {
     display: flex;
     column-gap: 24px;
 
+    flex-direction: column;
+    row-gap: 60px;
+
     /* scroll-snap-type: x mandatory; */
 }
 
@@ -509,6 +512,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     row-gap: 36px;
 
     --scrollbar-width: 18px;
@@ -517,12 +521,20 @@ body {
     --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
     --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
+    --bento-grid-width-4: calc(var(--grid-column-width) * 4 + var(--grid-gap) * 3);
+    --bento-grid-width-5: calc(var(--grid-column-width) * 5 + var(--grid-gap) * 4);
 }
+
+.carousel2 .hlist > .item:nth-child(n+4) {
+    display: none;
+}
+
 .carousel2 .item_align {
     scroll-snap-align: start;
 }
 .carousel2 .item img {
-    width: var(--bento-grid-width-3);
+    /* width: var(--bento-grid-width-5); */
+    width: 454px;
     height: auto;
     border-radius: 28px;
 }
@@ -545,6 +557,8 @@ body {
     position: absolute;
     left: 150px;
     top: 50%;
+
+    display: none;
 }
 .carousel2 .carouselbutton_rightadjust {
     width: 48px;
@@ -553,6 +567,8 @@ body {
     position: absolute;
     right: 150px;
     top: 50%;
+
+    display: none;
 }
 
 .roundnav {
@@ -565,6 +581,8 @@ body {
     column-gap: 8px;
 
     padding-top: 24px;
+
+    display: none;
 }
 .roundnav .round {
     width: 8px;
