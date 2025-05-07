@@ -797,7 +797,7 @@ body {
 }
 
 .grid7 .tile4 {
-    width: 550px;
+    width: 520px;
     padding: 40px 24px;
     box-sizing: border-box;
     background-color: #f8f9fa;
@@ -824,7 +824,7 @@ body {
 
 .grid7 .tile4 .longtext {
     max-width: calc(100vw - 24px);
-    font-size: 40px;
+    font-size: 24px;
 }
 /* #endregion gridsingle*/
 
@@ -839,12 +839,14 @@ body {
     --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
 
     flex-wrap: wrap;
+    row-gap: 24px;
 }
 .littlegrid2 .content .tile {
     /* width: 370px;
     height: 258px; */
     /* width: var(--bento-grid-width-3); */
     width: 250px;
+    /* height: 100%; */
 
     background-color: #f8f9fa;
     border-radius: 28px;
@@ -1030,7 +1032,7 @@ body {
 }
 
 .title h2 {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -1047,7 +1049,7 @@ body {
     font-size: 16px;
 }
 .textcontent h1 {
-    font-size: 48px;
+    font-size: 22px;
     font-weight: 600;
 
 }

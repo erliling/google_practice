@@ -820,6 +820,7 @@ body {
     /* width: 370px;
     height: 258px; */
     width: var(--bento-grid-width-3);
+    height: 100%;
 
     background-color: #f8f9fa;
     border-radius: 28px;
