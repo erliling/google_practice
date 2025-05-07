@@ -790,9 +790,15 @@ body {
 /* #endregion gridcomb4*/
 
 /* #region gridsingle*/
+.grid7 .content {
+    display: flex !important;
+    /* align-items: center !important; */
+    justify-content: center;
+}
+
 .grid7 .tile4 {
-    height: 360px;
-    padding: 40px;
+    width: 550px;
+    padding: 40px 24px;
     box-sizing: border-box;
     background-color: #f8f9fa;
 
@@ -809,13 +815,15 @@ body {
 }
 
 .grid7 .tile4 .textcontent_adjust {
-    width: 800px;
-    height: 416px;
-    margin: 0 auto;
+    /* width: 800px; */
+    /* height: 416px; */
+    /* margin: 0 auto; */
+
+    row-gap: 24px;
 }
 
 .grid7 .tile4 .longtext {
-    max-width: 684px;
+    max-width: calc(100vw - 24px);
     font-size: 40px;
 }
 /* #endregion gridsingle*/
