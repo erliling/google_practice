@@ -807,9 +807,20 @@ body {
 /* #endregion gridsingle*/
 
 /* #region littlegrid2*/
+.littlegrid2 .content {
+    --scrollbar-width: 18px;
+    --grid-gap: 24px;
+
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
+    --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
+    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
+}
 .littlegrid2 .content .tile {
-    width: 370px;
-    height: 258px;
+    /* width: 370px;
+    height: 258px; */
+    width: var(--bento-grid-width-3);
+
     background-color: #f8f9fa;
     border-radius: 28px;
 
@@ -820,6 +831,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    row-gap: 16px;
 }
 .littlegrid2 .content .tile img {
     width: 32px;
@@ -827,7 +839,8 @@ body {
 }
 
 .littlegrid2 h1 {
-    max-width: 500px;
+    /* max-width: 500px; */
+    flex: 1;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
