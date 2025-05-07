@@ -607,22 +607,32 @@ body {
 
 /* #region littlegrid*/
 .littlegrid1 .content_adjust {
-    height: 194px;
+    /* height: 194px; */
+
+    --scrollbar-width: 18px;
+    --grid-gap: 24px;
+
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
+    --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
+    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
+
 }
 .littlegrid1 .content .tile {
-    width: 272px;
-    height: 194px;
+    width: var(--bento-grid-width-3);;
+    height: auto;
     
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 24px;
 
 }
 
 .littlegrid1 .content .tile img {
-    width: 270px;
-    height: 156px;
+    width: 100%;
+    height: auto;
     padding: 32px 53px;
     
     box-sizing: border-box;
@@ -1070,11 +1080,14 @@ body {
 .littlegrid {
     display: flex;
     justify-content: center;
+    
 }
 .littlegrid .content{
     width: 1156px;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     column-gap: 24px;
 }
 
