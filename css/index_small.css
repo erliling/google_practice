@@ -892,13 +892,27 @@ body {
     justify-content: center;
 }
 .annotation .content{
-    width: 1120px;
-    height: 120px;
+    /* width: 1120px; */
+    /* height: 120px; */
     font-size: 12px;
+
+    --scrollbar-width: 18px;
+    --grid-gap: 24px;
+
+    --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
+    --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
+    --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
+    --bento-grid-width-9: calc(var(--grid-column-width) * 9 + var(--grid-gap) * 8);
     
+}
+.annotation .tile {
+    width: 450px;
 }
 .annotation .content ol {
     list-style-type: decimal;
+    list-style-position: inside;
+    /* padding-left: 100px;
+    margin-left: 60px; */
     display: grid;
     row-gap: 10px;
 }
