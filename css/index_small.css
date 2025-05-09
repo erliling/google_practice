@@ -99,11 +99,11 @@
 .banner {
     width: 100%;
     /* height: 768px; */
-    max-height: 768px;
+    /* max-height: 768px; */
     /* height: 100%; */
 }
 .banner .content {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     height: 100%;
     margin: 0 auto;
     max-width: calc(100% - 2em); 
@@ -127,7 +127,7 @@
 }
 
 .banner .content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 30px;
 
@@ -480,7 +480,7 @@ body {
 }
 
 .carousel2 .content_adjust {
-    position: relative;
+    /* position: relative; */
 
     height: 100%;
     margin: 0 auto;
@@ -492,7 +492,7 @@ body {
     /* height: 460px; */
     overflow-x: scroll;
     display: flex;
-    column-gap: 24px;
+    /* column-gap: 24px; */
 
     flex-direction: column;
     row-gap: 60px;
@@ -514,7 +514,7 @@ body {
     justify-content: space-between;
     align-items: center;
     row-gap: 36px;
-
+/* 
     --scrollbar-width: 18px;
     --grid-gap: 24px;
     --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
@@ -522,7 +522,7 @@ body {
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
     --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
     --bento-grid-width-4: calc(var(--grid-column-width) * 4 + var(--grid-gap) * 3);
-    --bento-grid-width-5: calc(var(--grid-column-width) * 5 + var(--grid-gap) * 4);
+    --bento-grid-width-5: calc(var(--grid-column-width) * 5 + var(--grid-gap) * 4); */
 }
 
 .carousel2 .hlist > .item:nth-child(n+4) {
@@ -530,12 +530,12 @@ body {
 }
 
 .carousel2 .item_align {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 .carousel2 .item img {
     /* width: var(--bento-grid-width-5); */
     width: 454px;
-    height: auto;
+    /* height: auto; */
     border-radius: 28px;
 }
 
@@ -639,13 +639,13 @@ body {
     row-gap: 24px;
     /* overflow: hidden; */
 
-    --scrollbar-width: 18px;
+    /* --scrollbar-width: 18px;
     --grid-gap: 24px;
 
     --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
     --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
-    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
+    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2); */
 
 }
 .littlegrid1 .content .tile {
@@ -791,6 +791,7 @@ body {
 
 /* #region gridsingle*/
 .grid7 .content {
+    /* margin: 0 auto; */
     display: flex !important;
     /* align-items: center !important; */
     justify-content: center;
@@ -830,13 +831,13 @@ body {
 
 /* #region littlegrid2*/
 .littlegrid2 .content {
-    --scrollbar-width: 18px;
+    /* --scrollbar-width: 18px;
     --grid-gap: 24px;
 
     --grid-column-width: calc(((min(calc(100vw - var(--scrollbar-width, 0px)), 1440px)) - var(--grid-gap)*13) / 12);
     --bento-grid-width-1: calc(var(--grid-column-width) * 1 + var(--grid-gap) * 0);
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
-    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
+    --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2); */
 
     flex-wrap: wrap;
     row-gap: 24px;
@@ -1001,7 +1002,7 @@ body {
 
     /* nav seperates to left and right parts */
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     /* align-items: center; */
     flex-direction: column-reverse;
     row-gap: 20px;
@@ -1035,7 +1036,7 @@ body {
 }
 
 /* right side */
-.footer .content .icon {
+/*.footer .content .icon {
     width: 24px;
     height: 24px;
     background-image: url(https://ssl.gstatic.com/store/images/regionflags/us.png);
@@ -1044,12 +1045,19 @@ body {
 
     display: inline-block;
 
-    /* locate the first icon */
     position: absolute;
     top: -1px;
+} */
+.footer .content img {
+    width: 24px;
+    height: auto;
+
+
+    /* position: absolute;
+    top: -1px; */
 }
 .footer .content span {
-    margin-left: 34px;
+    /* margin-left: 34px; */
 }
 .footer .svgicon {
     width: 20px;
