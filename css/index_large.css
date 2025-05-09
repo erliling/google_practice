@@ -345,17 +345,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     row-gap: 32px;
-
 }
 
 
 .grid1  .textcontent_position {
-    height: auto;
+    /* height: auto; */
     
     padding: 40px 40px 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 
     row-gap: 24px;
 }
@@ -366,6 +364,7 @@ body {
     font-weight: 600;
 }
 
+/* can use one grid but the tiles' sizes are different */
 .grid2 .tile2 {
     background-color: #F5F3EF;
 
@@ -385,7 +384,7 @@ body {
 
 }
 .grid2  .textcontent_position {
-    height: auto;
+    /* height: auto; */
 
     padding: 40px 40px 0;
     box-sizing: border-box;
@@ -400,7 +399,6 @@ body {
 }
 
 .grid2   .h1_adjust {
-    /* max-width: 580px; */
 
     font-size: 40px;
     font-weight: 600;
@@ -420,9 +418,9 @@ body {
 }
 
 .grid3 .textcontent_position {
-    height: auto;
+    /* height: auto; */
     padding: 40px 40px 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 
     row-gap: 24px;
 }
@@ -451,27 +449,25 @@ body {
 /* #region carousel2*/
 .carousel2 {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .carousel2 .content_adjust {
-    position: relative;
-
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
     max-width: calc(100% - 2em); 
+
+    position: relative;
 }
 
 .carousel2 .hlist_adjust {
-    /* width: 1300px; */
-    /* height: 460px; */
     overflow-x: scroll;
+
     display: flex;
     column-gap: 24px;
-
-    /* scroll-snap-type: x mandatory; */
 }
 
 .carousel2 .hlist_adjust::-webkit-scrollbar{
@@ -479,14 +475,13 @@ body {
 }
 
 .carousel2 .item {
-    /* width: 370px;
-    height: 420px; */
    
     text-align: center;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 36px;
+    row-gap: 24px;
 
     --scrollbar-width: 18px;
     --grid-gap: 24px;
@@ -496,11 +491,11 @@ body {
     --bento-grid-width-3: calc(var(--grid-column-width) * 3 + var(--grid-gap) * 2);
 }
 .carousel2 .item_align {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 .carousel2 .item img {
     width: var(--bento-grid-width-3);
-    height: auto;
+    /* height: auto; */
     border-radius: 28px;
 }
 
