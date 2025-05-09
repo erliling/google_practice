@@ -109,7 +109,7 @@
 .banner {
     width: 100%;
     /* height: 100%; */
-    max-height: 768px;
+    /* max-height: 768px; */
     /* height: 768px; */
 }
 .banner .content {
@@ -121,7 +121,7 @@
     
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
 }
 .banner .content .textcontent_position {
@@ -131,7 +131,7 @@
 }
 
 .banner .content img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 30px;
 
@@ -149,17 +149,15 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .carousel1 .content_adjust {
     position: relative;
 
-    height: 100%;
-    margin: 0 auto;
+    height: auto;
+    /* margin: 0 auto; */
     max-width: calc(100% - 2em); 
-
-
 }
 /* 
 @property --_x {
@@ -175,7 +173,7 @@ body {
 
 /* add horizontal scroll bar */
 .carousel1 .hlist_adjust {
-    height: auto;
+    /* height: auto; */
     overflow-x: scroll;
     /* --w: calc(1/(1-var(--_x))); */
     
@@ -195,14 +193,13 @@ body {
 
 .carousel1 .item {
     /* height: 418px; */
-    position: relative;
-    padding: auto 15px 40px;
-    box-sizing: border-box;
+    /* padding: auto 15px 40px; */
+    /* box-sizing: border-box; */
     cursor: pointer;
-
+    position: relative;
+    
     /* scrollbar's width on the right side */
     --scrollbar-width: 18px;
-    
     --grid-gap: 24px;
 
     /* --shrinked-margin-width: 1em;
@@ -218,26 +215,25 @@ body {
     --bento-grid-width-2: calc(var(--grid-column-width) * 2 + var(--grid-gap) * 1);
 
 }
-.carousel1 .item .pic {
-    /* height: 250px; */
-}
 
 .carousel1 .item img {
     width: var(--bento-grid-width-2);
-    height: auto;
+    /* height: auto; */
     background-color: #eff0f1;
     border-radius: 6px;
     margin-bottom: 20px;
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 .carousel1 .item .pic .newtag {
     width: 40px;
     height: 20px;
     background-color: rgb(222, 225, 240);
-    font-size: 12px;
     border-radius: 5px;
+
+    font-size: 12px;
     text-align: center;
     line-height: 20px;
+
     position: absolute;
     top: 15px;
     left: 20px;;
@@ -245,16 +241,18 @@ body {
 
 .carousel1 .item .textcontent1 {
     height: 160px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    /* row-gap: 24px; */
+    /* align-items: flex-start; */
 
     margin-bottom: 40px;
 }
 
 .carousel1 .item .textcontent2 {
-    vertical-align: top;
+    /* vertical-align: top; */
     height: 50px;
 }
 
@@ -279,8 +277,9 @@ body {
     width: 100px;
     height: 20px;
     background-color: rgb(208, 234, 222);
-    font-size: 12px;
     border-radius: 5px;
+    
+    font-size: 12px;
     text-align: center;
     line-height: 20px;
     /* margin-top: 14px; */
