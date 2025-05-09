@@ -985,16 +985,23 @@ body {
 /* left side */
 .footer .content ul {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
 }
 .footer .content ul li {
-    margin-left: 20px;
-    position: relative;
+    /* margin-left: 20px; */
+    /* position: relative; */
+
+    /* height: 100%;
+    line-height: 100%; */
+
 }
 .footer .content ul li:first-child {
-    margin-left: 0px;
+    /* margin-left: 0px; */
 }
 
-.footer .content .icon {
+/* .footer .content .icon {
     width: 24px;
     height: 24px;
     background-image: url(https://ssl.gstatic.com/store/images/regionflags/us.png);
@@ -1003,12 +1010,19 @@ body {
 
     display: inline-block;
 
-    /* locate the first icon */
     position: absolute;
     top: -1px;
+} */
+.footer .content img {
+    width: 24px;
+    height: auto;
+
+
+    /* position: absolute;
+    top: -1px; */
 }
 .footer .content span {
-    margin-left: 34px;
+    /* margin-left: 34px; */
 }
 
 /* right side */
