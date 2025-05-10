@@ -59,11 +59,13 @@ window.onload = function (event) {
     carousel1leftbtn.addEventListener('click', function(event) {
         // console.log("left")
 
+        // 212+24 is a tile's width + a gap; so every click moves one tile
         let target = parseInt(hlistdom.scrollLeft - 212+24);
         // target doesn't exceed the very left
         if (target <= 0) {
             target = 0;
         }
+        // 10 is move speed
         move(hlistdom, "scrollLeft", target, 10);
 
         // hlistdom.scrollLeft -= 212+24;
@@ -144,12 +146,12 @@ window.onload = function (event) {
         let activeindex = roundnavs.indexOf(activeroundnav)
 
         if(currentScrollLeft > previousScrollLeft) {
-            console.log("scroll right2");
+            // console.log("scroll right2");
             let newindex = ((activeindex + 1) < roundnavs.length-1) ? (activeindex + 1) : (roundnavs.length - 1);
             changeActiveRoundnav(activeroundnav, newindex);
 
         } else if(currentScrollLeft < previousScrollLeft) {
-            console.log("scroll left2");
+            // console.log("scroll left2");
             let newindex = ((activeindex - 1) > 0) ? (activeindex - 1) : 0;
             changeActiveRoundnav(activeroundnav, newindex);
         }
